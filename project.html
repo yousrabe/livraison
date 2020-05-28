@@ -1,0 +1,867 @@
+<<!DOCTYPE html>
+<html ng-app="Sideapp">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <title>ma premier site</title>
+    <link rel="stylesheet" type="text/css" href="style 1.css">
+   <script type="text/javascript" src="angular.min.js"></script>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="projet.js"> </script>
+    <script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+<header>
+    <h1>Code Camp</h1>
+    <form method="post" action="">
+        <fieldset>
+            <legend> Connection</legend>
+            <label for="psw"><a href="" target="">Forget Password<a></label>
+            <input id="username" name="nom" type="text" placeholder="username">
+            <input id="psw" name="nom" type="password" placeholder="password">
+        </fieldset>
+
+    </form>
+
+    <ul>
+        <li> <button>Login</button></li>
+        <li><button id="popup" onclick="div_show()">Sign up</button></li>
+    </ul>
+
+</header>
+<nav ng-controller="PanelController">
+<ul class="menu">
+    <li ng-class="{active: isSelected(1)}"><a href ng-click="selectTab(1)">Home</a></li>
+    <li>
+        <a href="#">Basic front end</a>
+        <ul class="sub-menu">
+            <li ng-class="{active: isSelected(2)}"><a href ng-click="selectTab(2)">HTML5</a></li>
+            <li ng-class="{active: isSelected(3)}"><a href ng-click="selectTab(3)">CSS3</a></li>
+            <li ng-class="{active: isSelected(4)}"><a href ng-click="selectTab(4)">Learn Bootstrap </a></li>
+        </ul>
+    </li>
+  <li>
+    <a href="#">Advanced front end</a>
+    <ul class="sub-menu">
+      <li ng-class="{active: isSelected(5)}"><a href ng-click="selectTab(5)">Learn Angular js</a></li>
+      <li ng-class="{active: isSelected(6)}"><a href ng-click="selectTab(6)">Learn React</a></li>
+      <li ng-class="{active: isSelected(7)}"><a href ng-click="selectTab(7)">Learn Ionic</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="">Back end developpment</a>
+    <ul class="sub-menu">
+        <li ng-class="{active: isSelected(8)}"><a href ng-click="selectTab(8)">Php</a></li>
+        <li ng-class="{active: isSelected(9)}"><a href ng-click="selectTab(9)">Node js</a></li>
+        <li ng-class="{active: isSelected(10)}"><a href ng-click="selectTab(10)">Ruby on Rails</a></li>
+    </ul>
+  </li>
+</ul>
+</nav>
+<div ng-controller="PanelController">
+<section ng-show="isSelected(1)">
+    <div class="first_page">
+        <h1>Basic front end development courses</h1>
+        <ul>
+            <li ng-class="{active: isSelected(11)}"><a href ng-click="selectTab(11)">Start courses</a></li>
+        </ul>
+    </div>
+
+    <div class="first_page">
+    <h1>Advanced front end development courses</h1>
+        <ul>
+            <li ng-class="{active: isSelected(12)}"><a href ng-click="selectTab(12)">Start courses</a></li>
+        </ul>
+        
+    </div>
+
+    <div class="first_page">
+        
+        <h1>Back end development courses</h1>
+        <ul>
+            <li ng-class="{active: isSelected(13)}"><a href ng-click="selectTab(13)">Start courses</a></li>
+        </ul>
+
+    </div>
+    
+</section>
+
+<section ng-show="isSelected(2)" class="scrol">
+    <div style="height:180;">
+        <h2>introduction</h2>
+        <img src="src/HTML5.png" class="floats">
+        <p>With HTML you can create your own Web site.
+
+        This tutorial teaches you everything about HTML.
+
+        HTML is easy to learn - You will enjoy it.<br>
+        so fasten your seat belt and lets begin 
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2>What is HTML?</h2>
+        <p>HTML is a markup language for describing web documents (web pages).</p>
+        <ul>
+            <li>HTML stands for Hyper Text Markup Language</li>
+            <li>A markup language is a set of markup tags</li>
+            <li>HTML documents are described by HTML tags</li>
+            <li>Each HTML tag describes different document content</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>HTML Example</h2>
+        <img src="src/html_exemple.png">
+    </div>
+    <hr>
+    <div>
+        <h2>Example Explained</h2>
+        <ul>
+            <li>The "DOCTYPE" declaration defines the document type to be HTML</li>
+            <li>The text between "html" and "html" describes an HTML document</li>
+            <li>The text between "head" and "head" provides information about the document</li>
+            <li>The text between "title" and "title" provides a title for the document</li>
+            <li>The text between "body" and "body" describes the visible page content</li>
+            <li>The text between "h1" and "h1" describes a heading</li>
+            <li>The text between "p" and "p" describes a paragraph</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>HTML Tags</h2>
+        <p>HTML tags are keywords (tag names) surrounded by angle brackets:
+        <br>
+        <br>
+        "tagname" content "tagname"
+        </p>
+        <ul>
+            <li>HTML tags normally come in pairs like "p" element</li>
+            <li>The first tag in a pair is the start tag, the second tag is the end tag</li>
+            <li>The end tag is written like the start tag, but with a slash before the tag name</li>
+            <img src="src/light_bulb.jpg">
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>HTML Page Structure</h2>
+        <img src="src/html_page_structure.jpg">
+        <img src="src/light_bulb.jpg">
+    </div>
+
+</section>
+
+<section ng-show="isSelected(3)" class="scrol">
+    <div style="height:250;">
+        <h2>introduction</h2>
+        <img src="src/CSS3.png" class="floats">
+        <br>
+        <p>CSS is a stylesheet language that describes the presentation of an HTML (or XML) document. CSS describes how elements must be rendered on screen, on paper, or in other media.This tutorial will teach you CSS from basic to advanced.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>What is CSS?</h2>
+        <ul>
+            <li>CSS stands for Cascading Style Sheets</li>
+            <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+            <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+            <li>External stylesheets are stored in CSS files</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>CSS Exemple</h2>
+        <img src="src/CSS_ex1.png">
+    </div>
+    <hr>
+    <div>
+        <h2>Why Use CSS?</h2>
+        <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>CSS Solved a Big Problem</h2>
+        <p>
+        HTML was NEVER intended to contain tags for formatting a web page!<br>
+
+        HTML was created to describe the content of a web page, like:<br>
+        "h1" This is a heading "h1" <br>
+        "p" This is a paragraph."p" <br>
+        When tags like "font", and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.<br>
+        To solve this problem, the World Wide Web Consortium (W3C) created CSS.<br>
+        CSS removed the style formatting from the HTML page!
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2>CSS Saves a Lot of Work!</h2>
+        <p>
+        The style definitions are normally saved in external .css files.<br>
+        With an external stylesheet file, you can change the look of an entire website by changing just one file!
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2>CSS Syntax</h2>
+        <img src="src/CSS_Syntax.png">
+        <img src="src/light_bulb.jpg">
+    </div>
+
+</section>
+
+<section ng-show="isSelected(4)" class="scrol">
+    <div style="height:180px;">
+    <h2>introduction</h2>
+    <img src="src/bootstrap.png" class="floats" style="margin:5px;">
+    <p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.<br>
+    Bootstrap is completely free to download and use!
+    </p>
+    </div>
+    <hr>
+    <div>
+        <h2>What is Bootstrap?</h2>
+        <ul>
+            <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+            <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
+            <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+        </ul>
+        <img src="src/light_bulb.jpg">
+    </div>
+    <hr>
+    <div>
+        <h2>Bootstrap History</h2>
+        <p>Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, and released as an open source product in August 2011 on GitHub.<br>
+        <strong>In June 2014 Bootstrap was the No.1 project on GitHub!</strong>
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2>Why Use Bootstrap?</h2>
+        <ul>
+            <li>Easy to use: Anybody with just basic knowledge of HTML and CSS can start using Bootstrap</li>
+            <li>Responsive features: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops</li>
+            <li>Mobile-first approach: In Bootstrap 3, mobile-first styles are part of the core framework</li>
+            <li>Browser compatibility: Bootstrap is compatible with all modern browsers (Chrome, Firefox, Internet Explorer, Safari, and Opera)</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Downloading Bootstrap</h2>
+        <p>If you want to download and host Bootstrap yourself, go to <a href="http://getbootstrap.com/getting-started/" target="blank">getbootstrap.com</a>, and follow the instructions there.</p>
+        <img src="src/light_bulb.jpg">
+    </div>
+    <hr>
+    <div>
+        <h2>Bootstrap Example</h2>
+        <img src="src/bootstrap_example.png">
+    </div>
+</section>
+
+<section ng-show="isSelected(5)" class="scrol">
+    <div style="height:200px;">
+    <h2>Introduction</h2>
+    <img src="src/angularjs_logo.png" class="floats">
+    <p>AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs. Read on to find out how.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Why AngularJS?</h2>
+        <p>
+            HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in web-applications. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2>Alternatives</h2>
+        <p>
+            Other frameworks deal with HTML’s shortcomings by either abstracting away HTML, CSS, and/or JavaScript or by providing an imperative way for manipulating the DOM. Neither of these address the root problem that HTML was not designed for dynamic views.
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2>The Basics</h2>
+        <img src="src/basic_angular.png">
+        <img src="src/light_bulb.jpg">
+    </div>
+    <hr>
+    <div>
+        <h2>Add Some Control</h2>
+        <div>
+            <h3>Data Binding</h3>
+            <p>Data-binding is an automatic way of updating the view whenever the model changes, as well as updating the model whenever the view changes. This is awesome because it eliminates DOM manipulation from the list of things you have to worry about.</p>
+        </div>
+        <div>
+            <h3>Controller</h3>
+            <p>Controllers are the behavior behind the DOM elements. AngularJS lets you express the behavior in a clean readable form without the usual boilerplate of updating the DOM, registering callbacks or watching model changes.</p>
+        </div>
+        <div>
+            <h3>Plain JavaScript</h3>
+            <p>Unlike other frameworks, there is no need to inherit from proprietary types in order to wrap the model in accessors methods. Angular models are plain old JavaScript objects. This makes your code easy to test, maintain, reuse, and again free from boilerplate.</p>
+        </div>
+    </div>
+</section>
+
+<section ng-show="isSelected(6)" class="scrol">
+    <div style="height:240px;">
+        <h2>Introduction</h2>
+        <img src="src/react-logo.png" class="floats">
+        <p>React (also called React.js or ReactJS) is a free JavaScript library and open-source developed by Facebook since 2013. The main purpose of this library is to facilitate the creation of single-page web application, through the creation of dependent components of state and generating a page (or portion) HTML to every state change.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>JUST THE UI</h2>
+        <p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it's easy to try it out on a small feature in an existing project.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>VIRTUAL DOM</h2>
+        <p>React abstracts away the DOM from you, giving a simpler programming model and better performance. React can also render on the server using Node, and it can power native apps using <strong>React Native.</strong></p>
+    </div>
+    <hr>
+    <div>
+        <h2>DATA FLOW</h2>
+        <p>React implements one-way reactive data flow which reduces boilerplate and is easier to reason about than traditional data binding.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>React Example</h2>
+        <img src="src/react-code.png">
+        <img src="src/light_bulb.jpg">
+    </div>
+
+</section>
+
+<section ng-show="isSelected(7)" class="scrol">
+    <div style="height:220px;">
+    <h2>Introduction</h2>
+    <img src="src/ionic_logo.png" class="floats" style="margin:5px;">
+    <p>Cross-platform mobile services that help you nail the basics and focus on delivering top-notch apps.<br>
+    Free and open source, Ionic offers a library of mobile-optimized HTML, CSS and JS components and tools for building highly interactive native and progressive web apps. Built with Sass, optimized for AngularJS.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Why Use Ionic?</h2>
+        <div>
+            <h3>Performance obsessed</h3>
+            <p>Speed is important. So important that you only notice when it isn't there. Ionic is built to perform and behave great on the latest mobile devices. Designed with web application best practices like efficient virtual DOM rendering, hardware accelerated transitions, and touch-optimized gestures, one thing is for sure: You'll be impressed.</p>
+        </div>
+        <div>
+            <h3>Angular & Ionic</h3>
+            <p>A match made in heaven. Ionic builds on top of Angular to create a powerful SDK well-suited for building rich and robust mobile apps for the app store and the mobile web. Ionic not only looks nice, but its core architecture is built for serious app development.</p>
+        </div>
+        <div>
+            <h3>Native focused</h3>
+            <p>Ionic is modeled off of standard native mobile development SDKs, bringing the UI standards of native apps together with the full power and flexibility of the open web. Ionic runs inside <a class="lien" href="http://cordova.apache.org/" target="blank">Cordova</a> or <a class="lien" href="http://phonegap.com/" target="blank">Phonegap</a> to deploy natively, or as a Progressive Web App. Develop once, deploy everywhere.</p>
+        </div>
+        <div>
+            <h3>Beautifully designed</h3>
+            <p>Clean, simple, and functional. Ionic has been designed to work and display beautifully on all current mobile devices and platforms. With ready-made mobile components, typography, and a gorgeous (yet extensible) base theme that adapts to each platform, you'll be building in style.</p>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <h2>Ionic Example</h2>
+        <img src="src/ionic-code.png">
+        <img src="src/light_bulb.jpg">
+    </div>
+
+</section>
+
+<section ng-show="isSelected(8)" class="scrol">
+    <div style="height:180px;">
+    <h2>introduction</h2>
+    <img src="src/PHP.png" class="floats">
+    <p>PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.<br>
+    PHP is a widely-used, free, and efficient alternative to competitors such as Microsoft's ASP.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>What is PHP?</h2>
+        <ul>
+            <li>PHP is an acronym for "PHP: Hypertext Preprocessor"</li>
+            <li>PHP is a widely-used, open source scripting language</li>
+            <li>PHP scripts are executed on the server</li>
+            <li>PHP is free to download and use</li>
+        </ul>
+        <img src="src/light_bulb.jpg">
+    </div>
+    <hr>
+    <div>
+        <h2>What You Should Already Know</h2>
+        <ul>
+            <p>Before you continue you should have a basic understanding of the following:</p><br>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <p ng-class="{active: isSelected(1)}">If you want to study these subjects first, find the tutorials on our <a href ng-click="selectTab(1)" class="lien">Home page</a>.</p>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>What is a PHP File?</h2>
+        <ul>
+            <li>PHP files can contain text, HTML, CSS, JavaScript, and PHP code</li>
+            <li>PHP code are executed on the server, and the result is returned to the browser as plain HTML</li>
+            <li>PHP files have extension ".php"</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>What Can PHP Do?</h2>
+        <ul>
+            <li>PHP can generate dynamic page content</li>
+            <li>PHP can create, open, read, write, delete, and close files on the server</li>
+            <li>PHP can collect form data</li>
+            <li>PHP can send and receive cookies</li>
+            <li>PHP can add, delete, modify data in your database</li>
+            <li>PHP can be used to control user-access</li>
+            <li>PHP can encrypt data</li>
+        </ul>
+        <p>
+        With PHP you are not limited to output HTML. You can output images, PDF files, and even Flash movies. You can also output any text, such as XHTML and XML.
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h2>Php Example</h2>
+        <img src="src/PHP_example.png">
+        <br>
+        <h2>Integration with HTML</h2>
+        <img src="src/PHP_example1.png">
+    </div>
+</section>
+
+<section ng-show="isSelected(9)" class="scrol">
+    <div style="height:200px;">
+        <h2>Introduction</h2>
+        <img src="src/nodejs_logo.png" class="floats">
+        <p>Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Features of Node.js</h2>
+        <p>Following are some of the important features that make Node.js the first choice of software architects.</p>
+        <ul>
+            <li>Asynchronous and Event Driven All APIs of Node.js library are asynchronous that is, non-blocking. It essentially means a Node.js based server never waits for an API to return data. The server moves to the next API after calling it and a notification mechanism of Events of Node.js helps the server to get a response from the previous API call.</li>
+            <li>Very Fast Being built on Google Chrome's V8 JavaScript Engine, Node.js library is very fast in code execution.</li>
+            <li>Single Threaded but Highly Scalable - Node.js uses a single threaded model with event looping. Event mechanism helps the server to respond in a non-blocking way and makes the server highly scalable as opposed to traditional servers which create limited threads to handle requests. Node.js uses a single threaded program and the same program can provide service to a much larger number of requests than traditional servers like Apache HTTP Server.</li>
+            <li>No Buffering - Node.js applications never buffer any data. These applications simply output the data in chunks.</li>
+            <li>License - Node.js is released under the MIT license</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Who Uses Node.js?</h2>
+        <p>Following is the link on github wiki containing an exhaustive list of projects, application and companies which are using Node.js. This list includes eBay, General Electric, GoDaddy, Microsoft, PayPal, Uber, Wikipins, Yahoo!, and Yammer to name a few.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Concepts</h2>
+        <p>The following diagram depicts some important parts of Node.js which we will discuss in detail in the subsequent chapters.</p>
+        <img src="src/nodejs_concept.jpg">
+    </div>
+    <hr>
+    <div>
+        <h2>Where to Use Node.js?</h2>
+        <p>Following are the areas where Node.js is proving itself as a perfect technology partner.</p>
+        <ul>
+            <li>I/O bound Applications</li>
+            <li>Data Streaming Applications</li>
+            <li>Data Intensive Real time Applications (DIRT)</li>
+            <li>JSON APIs based Applications</li>
+            <li>Single Page Applications</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Node.js Example</h2>
+        <img src="src/nodejs_example.png">
+    </div>
+
+</section>
+
+<section ng-show="isSelected(10)" class="scrol">
+    <div style="height:250px;">
+        <h2>Introduction</h2>
+        <img src="src/Ruby_logo.png" class="floats">
+        <p>Learning to build a modern web application is daunting. Ruby on Rails makes it much easier and more fun. It includes everything you need to build fantastic applications, and you can learn it with the support of our large, friendly community.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>What is Ruby?</h2>
+        <p>Before we ride on Rails, let us recapitulate a few points of Ruby, which is the base of Rails.</p>
+        <p>Ruby is the successful combination of −</p>
+        <ul>
+            <li>malltalk's conceptual elegance</li>
+            <li>Python's ease of use and learning, and</li>
+            <li>Perl's pragmatism.</li>
+        </ul>
+        <p>Ruby is −</p>
+        <ul>
+            <li>A high-level programming language.</li>
+            <li>Interpreted like Perl, Python, Tcl/TK.</li>
+            <li>Object-oriented like Smalltalk, Eiffel, Ada, Java.</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Why Ruby?</h2>
+        <p>Ruby originated in Japan and now it is gaining popularity in US and Europe as well. The following factors contribute towards its popularity −</p>
+        <ul>
+            <li>Easy to learn</li>
+            <li>Open source (very liberal license)</li>
+            <li>Rich libraries</li>
+            <li>Very easy to extend</li>
+            <li>Truly object-oriented</li>
+            <li>Less coding with fewer bugs</li>
+            <li>Helpful community</li>
+        </ul>
+        <p>Although we have many reasons to use Ruby, there are a few drawbacks as well that you may have to consider before implementing Ruby −</p>
+        <ul>
+            <li>Performance Issues − Although it rivals Perl and Python, it is still an interpreted language and we cannot compare it with high-level programming languages like C or C++.</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Sample Ruby Code</h2>
+        <img src="src/ruby_example.png">
+    </div>
+    <hr>
+    <div>
+        <h2>Embedded Ruby</h2>
+        <p>Ruby provides a program called ERB (Embedded Ruby), written by Seki Masatoshi. ERB allows you to put Ruby codes inside an HTML file. ERB reads along, word for word, and then at a certain point, when it encounters a Ruby code embedded in the document, it starts executing the Ruby code.</p>
+        <p>You need to know only two things to prepare an ERB document −</p>
+        <ul>
+            <li>If you want some Ruby code executed, enclose it between <% and %>.</li>
+            <li>If you want the result of the code execution to be printed out, as a part of the output, enclose the code between <%= and %>.</li>
+        </ul>
+        <p>Then you have to run the program using the command <strong>\> erb erbdemo.rb</strong></p>
+    </div>
+</section>
+
+<section ng-show="isSelected(11)">
+    <div class="first_page">
+        <h1>HTML 5</h1>
+        <img src="src/HTML5.png" class="floats" style="position: relative;
+    bottom:80px;">
+        <ul>
+            <li ng-class="{active: isSelected(2)}"><a href ng-click="selectTab(2)">Start courses</a></li>
+        </ul>
+    </div>
+
+    <div class="first_page">
+    <h1>CSS 3</h1>
+    <img src="src/CSS3.png" class="floats" style="position: relative;
+    bottom: 100px;">
+        <ul>
+            <li ng-class="{active: isSelected(3)}"><a href ng-click="selectTab(3)">Start courses</a></li>
+        </ul>
+        
+    </div>
+
+    <div class="first_page">
+        
+        <h1>Learn Bootstrap</h1>
+        <img src="src/bootstrap.png" class="floats" style="position: relative;
+    bottom: 70px;">
+        <ul>
+            <li ng-class="{active: isSelected(4)}"><a href ng-click="selectTab(4)">Start courses</a></li>
+        </ul>
+
+    </div>
+</section>
+
+<section ng-show="isSelected(12)">
+    <div class="first_page">
+        <h1>Learn Angular js</h1>
+        <img src="src/angularjs_logo.png" class="floats" style="position: relative;
+    bottom: 80px;">
+        <ul>
+            <li ng-class="{active: isSelected(5)}"><a href ng-click="selectTab(5)">Start courses</a></li>
+        </ul>
+    </div>
+
+    <div class="first_page">
+    <h1>Learn React</h1>
+    <img src="src/react-logo.png" class="floats" style="position: relative;
+    bottom: 90px;">
+        <ul>
+            <li ng-class="{active: isSelected(6)}"><a href ng-click="selectTab(6)">Start courses</a></li>
+        </ul>
+        
+    </div>
+
+    <div class="first_page">
+        <h1>Learn Ionic</h1>
+        <img src="src/ionic_logo.png" class="floats" style="position: relative;
+    bottom: 90px;">
+        <ul>
+            <li ng-class="{active: isSelected(7)}"><a href ng-click="selectTab(7)">Start courses</a></li>
+        </ul>
+
+    </div>
+</section>
+
+<section ng-show="isSelected(13)">
+    <div class="first_page">
+        <h1>PHP</h1>
+        <img src="src/logo_php.png" class="floats" style="position: relative;
+    bottom: 90px;">
+        <ul>
+            <li ng-class="{active: isSelected(8)}"><a href ng-click="selectTab(8)">Start courses</a></li>
+        </ul>
+    </div>
+
+    <div class="first_page">
+    <h1>Node js</h1>
+    <img src="src/nodejs_logo.png" class="floats" style="position: relative;
+    bottom: 80px;">
+        <ul>
+            <li ng-class="{active: isSelected(9)}"><a href ng-click="selectTab(9)">Start courses</a></li>
+        </ul>
+        
+    </div>
+
+    <div class="first_page">
+        <h1>Ruby on Rails</h1>
+        <img src="src/Ruby_logo.png" class="floats" style="position: relative;
+    bottom: 120px;">
+        <ul>
+            <li ng-class="{active: isSelected(10)}"><a href ng-click="selectTab(10)">Start courses</a></li>
+        </ul>
+
+    </div>
+</section>
+</div>
+
+<div ng-controller="PanelController">
+<aside ng-show="isSelected(2)">
+    <img src="src/light_bulb.jpg" style="floats">
+    <ul>
+        <li>The start tag is often called the opening tag. The end tag is often called the closing tag.</li>
+        <hr>
+        <li>Some tags are double " <> " "<> " and some are orphans <></li>
+        <hr>
+        <li>Only the "body" area (the white area) is displayed by the browser.</li>
+    </ul>
+</aside>
+
+<aside ng-show="isSelected(3)">
+    <img src="src/light_bulb.jpg" style="floats">
+    <ul>
+        <li>The selector points to the HTML element you want to style.</li>
+        <hr>
+        <li>The declaration block contains one or more declarations separated by semicolons.</li>
+        <hr>
+        <li>Each declaration includes a CSS property name and a value, separated by a colon.</li>
+        <hr>
+        <li>A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.</li>
+    </ul>
+</aside>
+
+<aside ng-show="isSelected(4)">
+    <img src="src/light_bulb.jpg">
+    <h3>What is Responsive Web Design?</h3>
+    <p>Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.</p>
+    <hr>
+    <ul>
+        <li>If you don't want to download and host Bootstrap yourself, you can include it from a CDN (Content Delivery Network).</li>
+        <hr>
+        <li>MaxCDN provide CDN support for Bootstrap's CSS and JavaScript. Also include jQuery</li>
+    </ul>
+</aside>
+
+<aside ng-show="isSelected(5)">
+    <img src="src/light_bulb.jpg">
+    <ul>
+        <li>
+            <h3>ng-app</h3>
+            Tells AngularJS to be active in this portion of the page. In this case the entire document.
+        </li>
+        <hr>
+        <li>
+            <h3>angular.min.js</h3>
+            Load AngularJS.
+        </li>
+        <hr>
+        <li>
+            <h3>ng-model</h3>
+            This links the form and the model. This means that any changes to the control update the data in your model, and when you change the model it updates the control. Try it! Type in the control and see it update below.
+        </li>
+        <hr>
+        <li>
+            <h3>"yourName!"</h3>
+            The <strong>Brakets</strong> are a declarative way of specifying data binding locations in the HTML. AngularJS will automatically update this text whenever the yourName property changes.
+        </li>
+    </ul>
+</aside>
+
+<aside ng-show="isSelected(6)">
+    <img src="src/light_bulb.jpg">
+    <ul>
+        <li>React components implement a <strong>render()</strong> method that takes input data and returns what to display.</li>
+        <hr>
+        <li>This example uses an XML-like syntax called JSX</li>
+        <hr>
+        <li> Input data that is passed into the component can be accessed by <strong>render()</strong> via <strong>this.props</strong>.</li>
+    </ul>
+</aside>
+
+<aside ng-show="isSelected(7)">
+    <img src="src/light_bulb.jpg">
+    <ul>
+    <h3>What do you need to install</h3>
+    <li>You need to have Node.js installed, then you need to run <strong>npm install cordova</strong> if you are on Windows, or <strong>$ sudo npm install -g cordova</strong> if you are on Linux or Mac/OS</li>
+    <hr>
+    <li>Now all you have to do is installing Ionic by running <strong>npm install ionic</strong> on Windows, or <strong>$ sudo npm install -g ionic</strong> on Linux or Mac/OS</li>
+    </ul>
+
+</aside>
+
+<aside ng-show="isSelected(8)">
+    <img src="src/light_bulb.jpg">
+    <h3>PHP is an amazing and popular language!</h3>
+    <ul>
+        <li>It is powerful enough to be at the core of the biggest blogging system on the web (WordPress)!</li>
+        <hr>
+        <li>It is deep enough to run the largest social network (Facebook)!</li>
+        <hr>
+        <li>It is also easy enough to be a beginner's first server side language!</li>
+    </ul>
+</aside>
+
+<aside ng-show="isSelected(9)" style="">
+   <img src="src/nodejs_logo1.png">
+    <ul>
+        <h3>You can install Node.js from here</h3>
+        <li><a class="lien" target="blank" href="https://nodejs.org/en/">Node.js</a></li>
+    </ul>
+    <hr>
+    <ul>
+        <h3>You can complete the tutorila here</h3>
+        <li><a class="lien" target="blank" href="http://www.tutorialspoint.com/nodejs/nodejs_introduction.htm">Node.js tutorial</a></li>
+    </ul>
+
+</aside>
+
+<aside ng-show="isSelected(10)">
+    <img src="src/Ruby_logo1.png">
+    <ul>
+        <h3>You can install Ruby on Rails from here</h3>
+        <li><a class="lien" target="blank" href="http://rubyinstaller.org/">Ruby on Rails</a></li>
+    </ul>
+    <hr>
+    <ul>
+        <h3>You can complete the tutorila here</h3>
+        <li><a class="lien" target="blank" href="http://www.tutorialspoint.com/ruby-on-rails/rails-introduction.htm">Ruby on Rails tutorial</a></li>
+    </ul>
+</aside>
+</div>
+
+<div ng-controller="PanelController">
+<article ng-controller="Side" ng-show="isSelected(1)">
+    <ul>
+        <li ng-repeat="item in comments">{{item}}</li>
+    </ul>
+<label for="comment">your opinion matters</label>
+<input id="comment" type="text" size="30" ng-model="comment" placeholder="rate the hole site">
+<button ng-click="comments.push(comment)">comment</button>
+</article>
+
+<article ng-controller="Side" ng-show="isSelected(11)">
+    <ul>
+        <li ng-repeat="item in comments">{{item}}</li>
+    </ul>
+    <label for="comment">your opinion matters</label>
+<input id="comment" type="text" size="30" ng-model="comment" placeholder="rate this courses">
+<button ng-click="comments.push(comment)">comment</button>
+</article>
+
+<article ng-controller="Side" ng-show="isSelected(12)">
+    <ul>
+        <li ng-repeat="item in comments">{{item}}</li>
+    </ul>
+    <label for="comment">your opinion matters</label>
+<input id="comment" type="text" size="30" ng-model="comment" placeholder="rate this courses">
+<button ng-click="comments.push(comment)">comment</button>
+</article>
+
+<article ng-controller="Side" ng-show="isSelected(13)">
+    <ul>
+        <li ng-repeat="item in comments">{{item}}</li>
+    </ul>
+    <label for="comment">your opinion matters</label>
+<input id="comment" type="text" size="30" ng-model="comment" placeholder="rate this courses">
+<button ng-click="comments.push(comment)">add</button>
+</article>
+</div>
+
+<footer>
+<div class="All_elements">
+<div>
+    <h2>NOS SERVICES</h2>
+    <ul>
+        <li><a href="#">Création site internet</a></li>
+        <li><a href="#">Communication</a></li>
+        <li><a href="#">Hébergement de site web</a></li>
+        <li><a href="#">Formation développeur web</a></li>
+    </ul>
+</div>
+<div>
+    <h2>INFORMATION</h2>
+    <ul>
+        <li><a href="#">Mention légales</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="http://www.dictionnaireduweb.com/" target="blank">Dictionnaire web</a></li>
+    </ul>
+</div>
+<div>
+    <h2>SUIVEZ-NOUS</h2>
+    <ul>
+        <li><a href="#">Twitter</a></li>
+        <br>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Google +</a></li>
+    </ul>
+</div>
+<div class="special">
+    <ul>
+        <li style="margin:30px;"> <img src="src/map.png"> Djebeniana-Sfax 3056</li>
+        <li style="margin:30px;"> <img src="src/mail.png"> benbelgacematef007@gmail.com</li>
+        <li style="margin:30px;"> <img src="src/phone.png"> +216 53 974 124</li>
+    </ul>
+</div>
+</div>
+
+<form action="" method="post">
+    <label for="courriel" class="titre">RESTER INFORMER!</label>
+    <input type="email" id="courriel" placeholder="votre adresse email"/>
+    <button type="submit">OK</button>
+</form>
+<div class="copyright">
+<h3>Code Camp</h3>
+<p>
+    Copyright © 2016 Code Camp
+</p>
+</div>
+</footer>
+
+<div id="abc">
+<!-- Popup Div Starts Here -->
+<div id="popupContact">
+<!-- Sign Up Form -->
+<form action="#" id="formula" method="post" name="form">
+<img id="close" src="src/exit.jpg" onclick ="div_hide()">
+<h2 id="titre">Sign Up</h2>
+<hr>
+<input id="name" name="name" placeholder="Name" type="text" class="pop">
+<input id="prename" name="prename" placeholder="Prename" type="text" class="pop">
+<input id="email" name="email" placeholder="Email" type="email" class="pop">
+<input id="pass" name="pass" placeholder="Enter new password" type="password" class="pop">
+<input id="pass1" name="pass" placeholder="Reenter new password" type="password" class="pop">
+<a href="javascript:%20check_empty()" id="submit">Sign up</a>
+</form>
+</div>
+<!-- Popup Div Ends Here -->
+</div>
+</body>
+</html>
